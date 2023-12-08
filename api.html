@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Catering</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="co.css">
+<style>
+body {font-family:"Times New Roman", serif}
+h1,h2,h3,h4,h5,h6 {font-family:serif; letter-spacing:5px}
+</style>
+<body bgcolor="DC8686">
+
+<!-- Navigation (Sits on top) -->
+<div class="w3-top w3-bar w3-white w3-padding w3-card w3-wide">
+<a href="#home" class="w3-bar-item w3-button">Thanesuan Jaikarjang</a>
+
+<!-- Right-sided navbar links. Hide them on small screens -->
+<div class="w3-right w3-hide-small">
+<a href="index.html" class="w3-bar-item w3-button">Porfiles</a>
+<a href="javascript.html" class="w3-bar-item w3-button">Javascript</a>
+<a href="chart.html" class="w3-bar-item w3-button">Chart</a>
+<a href="" class="w3-bar-item w3-button">API</a>
+
+</div>
+</div>
+
+<!-- API -->
+<div id="API" class="w3-padding-top-64">
+    <div class="w3-row">
+        <center>
+            <table>
+                <td class="t">
+                    <center>
+        <div class="api">
+            <h1>ดึงapi มาใช้ ตัวอย่าง</h1>
+            <h2>Click to change </h2>
+            <p id="demo2">start</p>
+            <button onclick="myFunction()">Click me</button>        
+        </div>
+        <script>
+            
+      function myFunction() {
+        fetch("https://catfact.ninja/fact")
+          .then(function(response){
+            return response.json()
+          })
+          .then(function(data){
+            let txt = "";
+              for (let x in data) {
+                txt += data[x] + " ";
+              document.getElementById("demo2").innerHTML = txt;
+              };
+          
+            return data;
+          })  
+    }
+        </script>
+</table>
+    </div>
+</div>
+
+<!--end-->
+
+
+</body>
+</html> 
